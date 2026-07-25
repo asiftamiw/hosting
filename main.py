@@ -142,11 +142,11 @@ def create_default_files(server_dir):
     main_py = os.path.join(server_dir, 'main.py')
     if not os.path.exists(main_py):
         with open(main_py, 'w', encoding='utf-8') as f:
-            f.write('''# JUBAYER HOSTING - Default Bot
+            f.write('''# TAMIM HOSTING - Default Bot
 import time
 
 print("=" * 40)
-print("Bot is running on JUBAYER HOSTING")
+print("Bot is running on TAMIM HOSTING")
 print("Server is ready!")
 print("=" * 40)
 
@@ -414,7 +414,7 @@ def api_create_server():
         password = generate_random_password(10)
     
     if not username:
-        username = f"JUBAYER_CODEX{random.randint(10000, 99999)}"
+        username = f"TAMIM_C0DEx{random.randint(10000, 99999)}"
     
     if len(username) < 3:
         return jsonify({'status': 'error', 'message': 'Username must be at least 3 characters!'}), 400
@@ -1106,16 +1106,12 @@ def api_set_startup(server_id):
 # ============================================
 
 if __name__ == '__main__':
-    import os
-    port = int(os.environ.get('PORT', 5000))
-    
     print("\n" + "=" * 50)
-    print("🚀 JUBAYER HOSTING - DEPLOYED ON RAILWAY")
+    print("🚀 TAMIM HOSTING - FINAL")
     print("=" * 50)
-    print(f"📍 Landing: https://your-railway-url/")
-    print("📍 Admin: /login")
-    print("🔗 API: /api/create")
+    print("📍 Landing: http://localhost:5000")
+    print("📍 Admin: http://localhost:5000/login")
+    print("🔗 API: http://localhost:5000/api/create")
     print("👤 admin / admin123")
     print("=" * 50 + "\n")
-    
-    app.run(host='0.0.0.0', port=port, debug=False)
+    app.run(debug=True, host='0.0.0.0', port=5000)
